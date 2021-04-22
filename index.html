@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>ImgSpec</title>
+
+    <style>
+      html {
+        font-family: Roboto, sans-serif;
+      }
+
+      .layout {
+        display:flex;
+        justify-content: center;
+      }
+
+      .content {
+        max-width: 900px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .img-container {
+        text-align: center;
+        padding: 10px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      html.dark {
+        background-color: black;
+        color: #eee;
+        font-family: monospace;
+        font-size: 1.2em;
+      }
+      html.dark img {
+        border: 1px solid greenyellow;
+      }
+    </style>
+
+  </head>
+
+<div class="layout">
+<div class="content">
+  <h1>Imaging Spectroscopy Processing Environment on the Cloud (ImgSPEC)</h1>
+
+  <p>
+    The geospatial Imaging Spectroscopy Processing Environment on the Cloud (ImgSPEC; formerly GeoSPEC) pioneers an on- demand 
+    science data processing system (SDPS) producing user-customized Level 1 calibrated radiance to Level 3+ data products in 
+    anticipation for the 2017-2027 Earth Decadal Survey prioritized spaceborne global imaging spectrometer to advance the study 
+    of Surface Biology and Geology (SBG). SBG data volumes (~20 TB/day) of high dimensionality (>224 bands) would be infeasible 
+    to download and the breadth of applications of the data across dozens of disciplines presents a need to evolve the traditional 
+    NASA SDPS. ImgSPEC streamlines processing data into key SBG observables that have demonstrated algorithms at local-to-regional 
+    scales and may vary locally. As such, a traditional, monolithic SDPS could not fully exploit the information in SBG measurements. 
+    To remove this barrier to use, ImgSPEC demonstrates an on-demand SDPS prototype that improves imaging spectroscopy data discovery, 
+    access, and utility enabling shared knowledge transfer from advanced imaging spectroscopy users to less experienced users such 
+    as decision makers and the general public. We test three use cases: 1) standard data processing workflows, 2) customized 
+    variants of standard workflows, and 3) algorithm development of new workflows. We create collaborative algorithm development 
+    environments that offer services typically restricted to NASA SDPSs such as data product provenance and bulk processing. We 
+    leverage existing NASA-funded information technologies such as the hybrid on-premise/ cloud science data system (HySDS), the 
+    Multi-mission Algorithm and Analysis Platform (MAAP), ECOSIS - a crowd-sourced spectral database, and ECOSML - a crowd-sourced 
+    model database. We demonstrate ImgSPEC on the Terrestrial Ecosystem use case processing through to foliar traits and fractional 
+    cover, thus aligning with driving thrusts for the SBG Science and Applications Communities.
+  </p>
+
+  <div class="img-container">
+    <img src="images/use-case.png" alt="ImgSpec use case diagram"/>
+  </div>
+
+  <h2>BACKGROUND</h2>
+  <h3>Context</h3>
+  <ul>
+    <li>The most recent Earth Science Decadal Survey was released by the National Academies in 2017</li>
+    <li>5 Designated Observables (DOs) - the most highly recommended Earth observables to change the current understanding of the Earth System</li>
+    <li>Surface Biology and Geology (SBG) - open data access global imaging spectrometer at regular repeat observation "Chemical Fingerprint of 
+      the Atmosphere and Earth's Surface" = dozens of information value-added products</li>
+    <li>Backwards compatible with a 30 year record = huge existing user base</li>
+    <li>Barriers to use: Big data - volumes and processing</li>
+  </ul>
+
+  <div class="img-container">
+    <img src="images/spectroscopy.png" alt="ImgSpec spectroscopy example"/>
+  </div>
+
+  <h3>Objective</h3>
+  <div>For the terrestrial ecology use case, demonstrate an end-to-end, on-demand, processing platform on the cloud for imaging spectroscopy 
+    Level 1 calibrated radiance data through Level 3+ information products
+  </div>
+
+  <h2>SYSTEM DESIGN</h2>
+  <div>We create:</div>
+  <ul>
+    <li>Enable a collaborative algorithm development environment (Eclipse Che - Jupyter Hub, R Studio, etc)</li>
+    <li>Offer services typically restricted to NASA Science Data Systems such as data product provenance and bulk processing</li>
+  </ul>
+  <div>We leverage existing NASA-funded information technologies:</div>
+  <ul>
+    <li>Hybrid on-premise/ cloud Science Data System (HySDS)</li>
+    <li>Multi-mission Algorithm and Analysis Platform (MAAP)</li>
+    <li>ECOSIS - a crowd-sourced spectral database</li>
+    <li>ECOSML - a crowd-sourced model database</li>
+  </ul>
+  
+  <div class="img-container">
+    <img src="images/system-design.png" alt="ImgSpec system design"/>
+  </div>
+
+  <h2>CONTACT</h2>
+  <div style="margin-bottom:50px">For more information contact <a href="mailto:natasha.stavros@colorado.edu">natasha.stavros@colorado.edu</a></div>
+
+</div>
+</div>
+
+
+<script>
+  if( window.location.search.match(/darkmode/) ) {
+    document.querySelector('html').classList.add('dark');
+  }
+</script>
+
+</body>
+</html>
